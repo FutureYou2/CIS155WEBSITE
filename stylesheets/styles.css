@@ -1,3 +1,9 @@
+/*
+  styles.css
+  Purpose: Global site stylesheet used by most pages (fonts, colors, layout helpers).
+  Notes: Contains the shared navbar rules and a responsive media query to reduce font sizes on small screens.
+*/
+
 body {
     background-image: linear-gradient(to top, #ff0000, #ffffff);
     min-height: 100vh;
@@ -49,9 +55,10 @@ ul{
   padding-left: 0;
   font-family: 'Courier New', Courier, monospace;
   color: #000000;
-  font-size: 125%;
-  font-weight: bold;
-}
+/*
+  The media query above reduces font sizes on narrower viewports. The gamesheet uses a separate stylesheet
+  (`gamesheet.css`) so its layout and sizing can be controlled independently from the rest of the site.
+*/
 
 ul::first-line {
   font-family: 'Courier New', Courier, monospace;
