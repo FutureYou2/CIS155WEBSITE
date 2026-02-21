@@ -1,3 +1,8 @@
+/*
+    gamesheet.css
+    Purpose: Page-specific stylesheet for "The FINALS" page (`pages/thefinals.html`).
+    Notes: Contains layout for two-column text, centered logo/image styles, and a fixed vertical nav.
+*/
 
 body {
     background-image: linear-gradient(to top, #ff0000, #ffffff);
@@ -103,4 +108,4 @@ ul{
         font-size: xx-small;
     }
 }
-/*The point of this is to make text smaller on smaller screens, so that it doesn't look weird on mobile devices.*/
+/* Make text smaller on smaller screens so content remains readable and layout fits mobile devices. */
