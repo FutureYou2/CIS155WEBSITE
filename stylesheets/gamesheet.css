@@ -1,0 +1,106 @@
+
+body {
+    background-image: linear-gradient(to top, #ff0000, #ffffff);
+    min-height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.maintext p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #000000;
+    font-size: 125%;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 0.625em;
+    margin: 0.3125em 0;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+.thefinalslogo img {
+    padding-top: 1.25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.columnL {
+    float: left;
+    width: 50%;
+    padding: 0.625em;
+}
+
+.columnR {
+    float: right;
+    width: 50%;
+    padding: 0.625em;
+}
+
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.roundcoloredborder {
+    display: block;
+    margin: 1.875em auto;   /* centers it horizontally */
+    width: 20%;
+    border-radius: 50%;
+    border: 0.9375em solid #ff9494;
+    object-fit: cover;
+}
+.navbar {
+    position: fixed;
+    right: 1.25em;        
+    top: 50%;          
+    transform: translateY(-50%);
+
+    background-color: #8b8b8b;
+    padding: 1.5em 1em;
+    border-radius: 0.75em;
+
+    z-index: 1000;
+}
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255);
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+ul{
+  font-family: 'Courier New', Courier, monospace;
+  color: #000000;
+  font-size: 125%;
+  font-weight: bold;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+}
+
+@media (max-width: 1080px) {
+    p, a, h1, h2, h3, h4, h5, h6, li, ul, body {
+        font-size: xx-small;
+    }
+}
+/*The point of this is to make text smaller on smaller screens, so that it doesn't look weird on mobile devices.*/
