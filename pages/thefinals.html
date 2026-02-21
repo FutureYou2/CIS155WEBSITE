@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!--
+	thefinals.html
+	Purpose: Game-specific page showcasing "The FINALS" content and images.
+	Notes: Uses `stylesheets/gamesheet.css` for page-specific styling (separate from general styles).
+	Navigation is injected into `#nav-bar-placeholder` by `scripts/main.js`.
+-->
 <html lang="en">
 
 <head>
@@ -10,6 +16,7 @@
 
 <body class="gamepage">
 
+	<!-- Logo image for The FINALS page -->
 	<div class="thefinalslogo">
 		<img src="../images/The_Finals_logo.png" alt="The Finals Logo">
 	</div>
@@ -37,11 +44,13 @@
 		</div>
 
 		<!-- Image now properly under both columns -->
+		<!-- Character image (rounded border) shown below the two text columns -->
 		<img class="roundcoloredborder"
-			 src="../images/image.png"
-			 alt="My character in The FINALS" />
+				 src="../images/image.png"
+				 alt="My character in The FINALS" />
 	</main>
 
+	<!-- Shared navigation inserted here by `../scripts/main.js` -->
 	<div id="nav-bar-placeholder"></div>
 	<script src="../scripts/main.js"></script>
 
