@@ -1,0 +1,190 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #ff0000, #ffffff);
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.thefinalslogo img {
+    display: block;
+    margin: 1.5rem auto;
+    width: clamp(180px, 20vw, 350px);
+    height: auto;
+}
+
+/* =========================
+   MAIN TEXT PANEL
+========================= */
+
+.maintext {
+    background: white;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    width: min(90%, 1100px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.row {
+    display: flex;
+    gap: 2rem;
+}
+
+.column {
+    flex: 1;
+}
+
+.maintext p {
+    margin: 0 0 1rem 0;
+    line-height: 1.7;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    text-align: left;
+}
+
+ul {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-weight: bold;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-container {
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+}
+
+.roundcoloredborder {
+    width: clamp(180px, 25vw, 400px);
+    border-radius: 50%;
+    border: 0.75rem solid #ff9494;
+}
+
+/* =========================
+   NAVBAR (DESKTOP)
+========================= */
+
+.navbar {
+    position: fixed;
+    right: 1.25em;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #8b8b8b;
+    padding: 1.5em 1em;
+    border-radius: 0.75em;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+    color: white;
+    text-align: center;
+    display: block;
+}
+
+/* =========================
+   BREAKPOINT — 1100px
+========================= */
+
+@media (max-width: 1100px) {
+
+    .row {
+        gap: 1.5rem;
+    }
+
+    .maintext {
+        width: 92%;
+    }
+
+    .navbar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        border-radius: 0;
+        padding: 0.75rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* =========================
+   BREAKPOINT — 900px
+========================= */
+
+@media (max-width: 900px) {
+
+    .row {
+        flex-direction: column;
+    }
+
+    .maintext {
+        padding: 1.5rem;
+        padding-bottom: 80px; /* space for bottom nav */
+    }
+
+    .image-container {
+        padding-bottom: 80px;
+    }
+}
+
+/* =========================
+   BREAKPOINT — 600px
+========================= */
+
+@media (max-width: 600px) {
+
+    .maintext p {
+        font-size: 1rem;
+    }
+
+    .roundcoloredborder {
+        width: 70%;
+    }
+}
+
+/* =========================
+   BREAKPOINT — 350px
+========================= */
+
+@media (max-width: 350px) {
+
+    .maintext {
+        padding: 1.25rem;
+    }
+
+    .maintext p {
+        font-size: 0.95rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+}

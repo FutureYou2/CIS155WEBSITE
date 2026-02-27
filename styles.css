@@ -1,0 +1,229 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to top, #ff0000, #ffffff);
+    overflow-x: hidden;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+h1, #title {
+    font-family: Copperplate Gothic Light, sans-serif;
+    color: #000000;
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-top: 1rem;
+}
+
+#title::first-letter {
+    color: #000000;
+    font-size: 1.25em;
+}
+
+/* =========================
+   MAIN CONTENT BOX
+========================= */
+
+#maintext {
+    background-color: #ffffff;
+    width: clamp(80%, 60vw, 900px);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+#maintext p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #000000;
+    font-size: clamp(1rem, 1.1vw, 1.25rem);
+    line-height: 1.7;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+/* =========================
+   GAME LIST
+========================= */
+
+.gamelist {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #420000;
+    font-size: clamp(1rem, 1.1vw, 1.25rem);
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+#maintext ul {
+    list-style-position: inside;
+    text-align: center;
+    padding-left: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000000;
+    margin-top: 1em;
+}
+
+#maintext ul li {
+    margin: 0.5em 0;
+}
+
+#maintext ul::first-line {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff0000;
+    font-size: 125%;
+    font-weight: bold;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    right: 1.25em;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #8b8b8b;
+    padding: 1.5em 1em;
+    border-radius: 0.75em;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 125%;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 1%;
+    padding-bottom: 10%;
+}
+
+/* =========================
+   RESPONSIVE LAYOUT
+========================= */
+
+/* Breakpoint 1100px */
+@media (max-width: 1100px) {
+    #maintext {
+        width: clamp(85%, 70vw, 800px);
+        padding: 1.75rem;
+    }
+
+    .navbar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        border-radius: 0;
+        padding: 0.75rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Breakpoint 900px */
+@media (max-width: 900px) {
+    #maintext {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .navbar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        border-radius: 0;
+        padding: 0.75rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Breakpoint 600px */
+@media (max-width: 600px) {
+    #maintext {
+        padding: 1.25rem;
+    }
+
+    .navbar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        border-radius: 0;
+        padding: 0.75rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Breakpoint 350px */
+@media (max-width: 350px) {
+    #maintext {
+        padding: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    h1, #title {
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+    }
+}

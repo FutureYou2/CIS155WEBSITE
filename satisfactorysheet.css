@@ -1,0 +1,278 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #ff0000, #ffffff);
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.satisfactorylogo {
+    display: block;
+    margin: 1.5rem auto;
+    width: clamp(180px, 20vw, 350px);
+    height: auto;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 2rem;
+    padding-right: 250px;
+}
+
+/* =========================
+   IMAGE GRID
+========================= */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    padding-left: 50px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    display: block;
+}
+
+/* =========================
+   TEXT PANEL
+========================= */
+
+.maintext {
+    background: white;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.maintext p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: clamp(1rem, 1.1vw, 1.2rem);
+    text-align: left;
+}
+
+/* =========================
+   NAVBAR (DESKTOP)
+========================= */
+
+.navbar {
+  position: fixed;
+    right: 1.25em;        
+    top: 50%;          
+    transform: translateY(-50%);
+
+    background-color: #8b8b8b;
+    padding: 1.5em 1em;
+    border-radius: 0.75em;
+
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+}
+ul{
+  font-family: 'Courier New', Courier, monospace;
+  color: #000000;
+  font-size: 125%;
+  font-weight: bold;
+}
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+}
+
+/* =========================
+   BREAKPOINT 1 — 1100px
+========================= */
+
+@media (max-width: 1100px) {
+
+    .content-layout {
+        grid-template-columns: 40% 1fr;
+        padding-right: 170px;
+    }
+
+    .maintext p {
+        font-size: clamp(1rem, 1.4vw, 1.1rem);
+    }
+        /* NAVBAR → bottom from this width down */
+    .navbar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        border-radius: 0;
+        padding: 0.75rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* Collapse layout */
+    .content-layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        padding-bottom: 80px; /* space for bottom nav */
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .maintext {
+        margin-top: 1rem;
+    }
+    .footer {
+        position: absolute;
+        top: 0;
+        color: #000000;
+        padding-left: 1%;
+        font-size: small;
+    }
+
+    /* NAVBAR → bottom from this width down */
+    .navbar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        border-radius: 0;
+        padding: 0.75rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* =========================
+   BREAKPOINT 3 — 600px
+   Mobile nav moves to bottom
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        border-radius: 0;
+        padding: 0.75rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content-layout {
+        padding-bottom: 80px; /* space for bottom nav */
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .maintext {
+        padding: 1.5rem;
+    }
+
+    .maintext p {
+        font-size: 1rem;
+    }
+    .footer {
+        position: absolute;
+        top: 0;
+        color: #000000;
+        padding-left: 1%;
+        font-size: x-small;
+    }
+}
+
+/* =========================
+   BREAKPOINT 4 — 350px
+   Small phones
+========================= */
+
+@media (max-width: 350px) {
+
+    .satisfactorylogo {
+        width: 70%;
+    }
+
+    .image-grid img {
+        border-radius: 0.5rem;
+    }
+
+    .maintext {
+        padding: 1.25rem;
+    }
+
+    .maintext p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+    .footer {
+        position: absolute;
+        top: 0;
+        color: #000000;
+        padding-left: 1%;
+        font-size: xx-small;
+    }
+}
