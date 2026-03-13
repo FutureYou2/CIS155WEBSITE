@@ -1,7 +1,13 @@
 /* =========================
    GLOBAL
 ========================= */
-
+@font-face {
+    font-family: 'Urbanist';
+    src: url('Urbanist-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 * {
     box-sizing: border-box;
 }
@@ -9,7 +15,7 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background-image: linear-gradient(to top, #ff0000, #ffffff);
+    background-image: linear-gradient(to top, #ff8800, #ffffff);
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -42,7 +48,7 @@ body {
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.25rem;
     padding-left: 50px;
 }
@@ -70,22 +76,28 @@ body {
     line-height: 1.7;
     font-size: clamp(1rem, 1.1vw, 1.2rem);
     text-align: left;
+    font-family: urbanist;
 }
 
 /* =========================
    NAVBAR (DESKTOP)
 ========================= */
-
+svg{
+    width:150px;
+    height:150px;
+    fill:currentColor;
+    padding-left: 8px;
+}
 .navbar {
-  position: fixed;
-    right: 1.25em;        
-    top: 50%;          
+    position: fixed;
+    right: 0;
+    top: 50%;
     transform: translateY(-50%);
-
     background-color: #8b8b8b;
     padding: 1.5em 1em;
+    padding-top: 100%;
+    padding-bottom: 100%;
     border-radius: 0.75em;
-
     z-index: 1000;
 }
 
@@ -93,7 +105,6 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-
     display: flex;
     flex-direction: column;
 }
@@ -102,6 +113,10 @@ body {
     color: rgb(255, 255, 255);
     display: block;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 100%;
+    padding-top: 1.25rem;
 }
 ul{
   font-family: 'Courier New', Courier, monospace;
@@ -124,10 +139,15 @@ ul{
 ========================= */
 
 @media (max-width: 1100px) {
-
+    svg{
+        width:50px;
+        height:50px;
+        fill:currentColor;
+        padding-top: 10px;
+    }
     .content-layout {
         grid-template-columns: 40% 1fr;
-        padding-right: 170px;
+        padding-right: 1%;
     }
 
     .maintext p {
@@ -150,7 +170,15 @@ ul{
         justify-content: space-around;
     }
 }
+@media (max-width: 950px) {
 
+    /* Collapse layout */
+    .content-layout {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        padding-right: 10%;
+    }
+}
 @media (max-width: 900px) {
 
     /* Collapse layout */
@@ -190,6 +218,13 @@ ul{
     .nav-links {
         flex-direction: row;
         justify-content: space-around;
+    }
+}
+
+
+@media (max-width: 670px) {
+    .nav-links a {
+        font-size: medium;
     }
 }
 
