@@ -39,7 +39,7 @@ h1, #title {
 ========================= */
 #introbox {
     background-color: #ffffff;
-    width: clamp(80%, 60vw, 900px);
+    width: clamp(60%, 60vw, 900px);
     margin: 2rem auto;
     padding: 2rem;
     border-radius: 1.25rem;
@@ -59,7 +59,7 @@ h1, #title {
 
 #maintext {
     background-color: #ffffff;
-    width: clamp(80%, 60vw, 900px);
+    width: clamp(50%, 60vw, 900px);
     margin: 2rem auto;
     padding: 2rem;
     border-radius: 1.25rem;
